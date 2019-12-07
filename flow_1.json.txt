@@ -1,1 +1,266 @@
-[{"id":"4f08f583.aed51c","type":"tab","label":"ÉtÉçÅ[ 1","disabled":false,"info":""},{"id":"78554730.547d7","type":"inject","z":"4f08f583.aed51c","name":"Test","topic":"","payload":"hello world!","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":80,"wires":[["9a730167.8b739"]]},{"id":"fa2f05f8.227508","type":"debug","z":"4f08f583.aed51c","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","targetType":"msg","x":550,"y":80,"wires":[]},{"id":"d58dd27a.302ef8","type":"http in","z":"4f08f583.aed51c","name":"","url":"/test","method":"get","upload":false,"swaggerDoc":"","x":130,"y":420,"wires":[["3b898ea5.3e89de","5b1de2da.d808f"]]},{"id":"3b898ea5.3e89de","type":"http response","z":"4f08f583.aed51c","name":"","statusCode":"200","headers":{},"x":430,"y":420,"wires":[]},{"id":"124452da.fa2b45","type":"http request","z":"4f08f583.aed51c","name":"","method":"GET","ret":"txt","paytoqs":false,"url":"http://www.yahoo.co.jp","tls":"","persist":false,"proxy":"","authType":"","x":310,"y":540,"wires":[["f34c4ae.2827f78"]]},{"id":"2b7c1666.ed0eb2","type":"http in","z":"4f08f583.aed51c","name":"Test","url":"/test2","method":"get","upload":false,"swaggerDoc":"","x":120,"y":540,"wires":[["124452da.fa2b45"]]},{"id":"f34c4ae.2827f78","type":"http response","z":"4f08f583.aed51c","name":"","statusCode":"","headers":{},"x":500,"y":540,"wires":[]},{"id":"5b1de2da.d808f","type":"debug","z":"4f08f583.aed51c","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":440,"y":480,"wires":[]},{"id":"dab75bb8.1385a8","type":"http request","z":"4f08f583.aed51c","name":"","method":"GET","ret":"txt","paytoqs":false,"url":"http://google.com/","tls":"","persist":false,"proxy":"","authType":"","x":310,"y":620,"wires":[["59ec2d1c.988858"]]},{"id":"8e27602b.87133","type":"http in","z":"4f08f583.aed51c","name":"Test","url":"/test3","method":"get","upload":false,"swaggerDoc":"","x":120,"y":620,"wires":[["dab75bb8.1385a8"]]},{"id":"59ec2d1c.988858","type":"http response","z":"4f08f583.aed51c","name":"","statusCode":"","headers":{},"x":500,"y":620,"wires":[]},{"id":"9a730167.8b739","type":"change","z":"4f08f583.aed51c","name":"","rules":[{"t":"change","p":"payload","pt":"msg","from":"world!","fromt":"str","to":"from NODE-red.","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":320,"y":80,"wires":[["fa2f05f8.227508"]]},{"id":"cef78a25.cbd298","type":"inject","z":"4f08f583.aed51c","name":"Test","topic":"","payload":"hello world!","payloadType":"str","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":130,"y":140,"wires":[["86cbc6c1.8beab"]]},{"id":"1a5fbe20.2c2c76","type":"debug","z":"4f08f583.aed51c","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","targetType":"msg","x":550,"y":140,"wires":[]},{"id":"86cbc6c1.8beab","type":"function","z":"4f08f583.aed51c","name":"chage","func":"var newString = msg.payload.replace(\"world!\", \"From Node-RED!\");\nreturn { payload : newString };","outputs":2,"noerr":2,"x":300,"y":140,"wires":[["1a5fbe20.2c2c76"],[]]}]
+[
+    {
+        "id": "4f08f583.aed51c",
+        "type": "tab",
+        "label": "„Éï„É≠„Éº 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "78554730.547d7",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "Test",
+        "topic": "",
+        "payload": "hello world!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "9a730167.8b739"
+            ]
+        ]
+    },
+    {
+        "id": "fa2f05f8.227508",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 550,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d58dd27a.302ef8",
+        "type": "http in",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "url": "/test",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "3b898ea5.3e89de",
+                "5b1de2da.d808f"
+            ]
+        ]
+    },
+    {
+        "id": "3b898ea5.3e89de",
+        "type": "http response",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 430,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "124452da.fa2b45",
+        "type": "http request",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://www.yahoo.co.jp",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 310,
+        "y": 540,
+        "wires": [
+            [
+                "f34c4ae.2827f78"
+            ]
+        ]
+    },
+    {
+        "id": "2b7c1666.ed0eb2",
+        "type": "http in",
+        "z": "4f08f583.aed51c",
+        "name": "Test",
+        "url": "/test2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "124452da.fa2b45"
+            ]
+        ]
+    },
+    {
+        "id": "f34c4ae.2827f78",
+        "type": "http response",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 500,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5b1de2da.d808f",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 440,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "dab75bb8.1385a8",
+        "type": "http request",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://google.com/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "59ec2d1c.988858"
+            ]
+        ]
+    },
+    {
+        "id": "8e27602b.87133",
+        "type": "http in",
+        "z": "4f08f583.aed51c",
+        "name": "Test",
+        "url": "/test3",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "dab75bb8.1385a8"
+            ]
+        ]
+    },
+    {
+        "id": "59ec2d1c.988858",
+        "type": "http response",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 500,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9a730167.8b739",
+        "type": "change",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "world!",
+                "fromt": "str",
+                "to": "from NODE-red.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "fa2f05f8.227508"
+            ]
+        ]
+    },
+    {
+        "id": "cef78a25.cbd298",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "Test",
+        "topic": "",
+        "payload": "hello world!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "86cbc6c1.8beab"
+            ]
+        ]
+    },
+    {
+        "id": "1a5fbe20.2c2c76",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 550,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "86cbc6c1.8beab",
+        "type": "function",
+        "z": "4f08f583.aed51c",
+        "name": "chage",
+        "func": "var newString = msg.payload.replace(\"world!\", \"From Node-RED!\");\nreturn { payload : newString };",
+        "outputs": 2,
+        "noerr": 2,
+        "x": 300,
+        "y": 140,
+        "wires": [
+            [
+                "1a5fbe20.2c2c76"
+            ],
+            []
+        ]
+    }
+]
