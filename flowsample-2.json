@@ -1,0 +1,636 @@
+[
+    {
+        "id": "4f08f583.aed51c",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "78554730.547d7",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "Test",
+        "topic": "",
+        "payload": "hello world!",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "9a730167.8b739"
+            ]
+        ]
+    },
+    {
+        "id": "fa2f05f8.227508",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 550,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d58dd27a.302ef8",
+        "type": "http in",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "url": "/test",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "3b898ea5.3e89de",
+                "5b1de2da.d808f"
+            ]
+        ]
+    },
+    {
+        "id": "3b898ea5.3e89de",
+        "type": "http response",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 430,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "124452da.fa2b45",
+        "type": "http request",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://www.yahoo.co.jp",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 310,
+        "y": 540,
+        "wires": [
+            [
+                "f34c4ae.2827f78"
+            ]
+        ]
+    },
+    {
+        "id": "2b7c1666.ed0eb2",
+        "type": "http in",
+        "z": "4f08f583.aed51c",
+        "name": "Test",
+        "url": "/test2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "124452da.fa2b45"
+            ]
+        ]
+    },
+    {
+        "id": "f34c4ae.2827f78",
+        "type": "http response",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 500,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5b1de2da.d808f",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 440,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "dab75bb8.1385a8",
+        "type": "http request",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": false,
+        "url": "http://google.com/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "59ec2d1c.988858"
+            ]
+        ]
+    },
+    {
+        "id": "8e27602b.87133",
+        "type": "http in",
+        "z": "4f08f583.aed51c",
+        "name": "Test",
+        "url": "/test3",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 620,
+        "wires": [
+            [
+                "dab75bb8.1385a8"
+            ]
+        ]
+    },
+    {
+        "id": "59ec2d1c.988858",
+        "type": "http response",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 500,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9a730167.8b739",
+        "type": "change",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "world!",
+                "fromt": "str",
+                "to": "from NODE-red.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "fa2f05f8.227508"
+            ]
+        ]
+    },
+    {
+        "id": "cef78a25.cbd298",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "Test",
+        "topic": "",
+        "payload": "banana",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "56f5f55.0e1790c"
+            ]
+        ]
+    },
+    {
+        "id": "1a5fbe20.2c2c76",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 560,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "56f5f55.0e1790c",
+        "type": "function",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "func": "//var msg2 = {payload : msg.payload + \"test2\"};\n//return msg2;\n\n//node.send(\"test\", msg.payload);\nif (msg.topic === \"banana\") {\n   return [ null, msg ];\n} else {\n   return [ msg, null ];\n}",
+        "outputs": 1,
+        "noerr": 2,
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "1a5fbe20.2c2c76"
+            ]
+        ]
+    },
+    {
+        "id": "42e672cc.6f82e8",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "topic": "",
+        "payload": "test",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "56f5f55.0e1790c"
+            ]
+        ]
+    },
+    {
+        "id": "301e2676.92f48a",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "topic": "input",
+        "payload": "{\"aaa\":\"100\",\"bbb\":\"200\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "e3ae90fa.a0c5d"
+            ]
+        ]
+    },
+    {
+        "id": "e3ae90fa.a0c5d",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 470,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "73b92cc.4e0b794",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "topic": "",
+        "payload": "{\"GPIO19\":\"1\",\"GPIO20\":\"0\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "5cb71673.ff76c8"
+            ]
+        ]
+    },
+    {
+        "id": "5cb71673.ff76c8",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 340,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "33351e7f.9e9fc6",
+        "type": "ping",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "host": "www.google.com",
+        "timer": "20",
+        "x": 150,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "28d91926.c36dd2",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 690,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "5e7322b.7568d5c",
+        "type": "switch",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "8",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 720,
+        "wires": [
+            [
+                "746a7fa1.38f3a8"
+            ]
+        ]
+    },
+    {
+        "id": "746a7fa1.38f3a8",
+        "type": "exec",
+        "z": "4f08f583.aed51c",
+        "command": "",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 520,
+        "y": 800,
+        "wires": [
+            [
+                "5025418e.45b74"
+            ],
+            [
+                "28d91926.c36dd2"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5025418e.45b74",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 710,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "37a9a97f.ed3656",
+        "type": "exec",
+        "z": "4f08f583.aed51c",
+        "command": "vcgencmd measure_temp",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "CPU温度表示",
+        "x": 320,
+        "y": 860,
+        "wires": [
+            [
+                "ffe386a9.2d0908"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a3168dd3.b45d6",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 820,
+        "wires": [
+            [
+                "37a9a97f.ed3656"
+            ]
+        ]
+    },
+    {
+        "id": "ffe386a9.2d0908",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 610,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "2843d603.71b9fe",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 140,
+        "y": 940,
+        "wires": [
+            [
+                "7cb0ae0a.f9cec"
+            ]
+        ]
+    },
+    {
+        "id": "7cb0ae0a.f9cec",
+        "type": "exec",
+        "z": "4f08f583.aed51c",
+        "command": "ifconfig wlan0 | grep 'inet ' | awk '{print $0}' | cut -c 14-28",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 480,
+        "y": 960,
+        "wires": [
+            [
+                "af5da85c.bcdaf8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "af5da85c.bcdaf8",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 810,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "938f405e.88df5",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 120,
+        "y": 1060,
+        "wires": [
+            [
+                "71e4cd07.c1bbf"
+            ]
+        ]
+    },
+    {
+        "id": "71e4cd07.c1bbf",
+        "type": "python3-function",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "func": "print(\"hello\")\nreturn msg",
+        "outputs": 1,
+        "x": 340,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "84889567.f031",
+        "type": "debug",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 730,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "a6a2b6fb.12a4b",
+        "type": "pythonshell in",
+        "z": "4f08f583.aed51c",
+        "name": "test",
+        "pyfile": "/home/pi/Sayhello.py",
+        "virtualenv": "",
+        "continuous": false,
+        "stdInData": false,
+        "x": 530,
+        "y": 1200,
+        "wires": [
+            [
+                "84889567.f031"
+            ]
+        ]
+    },
+    {
+        "id": "8e13b951.6b6338",
+        "type": "inject",
+        "z": "4f08f583.aed51c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 260,
+        "y": 1180,
+        "wires": [
+            [
+                "a6a2b6fb.12a4b"
+            ]
+        ]
+    }
+]
